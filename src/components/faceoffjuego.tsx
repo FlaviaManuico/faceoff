@@ -1,12 +1,3 @@
-// import React from "react";
-
-// export default function faceoffjuego(){
-//   return (
-//     <div className="flex bg-gray100 justify-center items-center h-[100vh] flex-col">
-//       <h1>Faceoff Juego</h1>
-//     </div>
-//   );
-// }
 "use client";
 import React, { useState, useEffect } from 'react';
 
@@ -18,7 +9,7 @@ const ReadyAnimation = () => {
   useEffect(() => {
     let interval: ReturnType<typeof setInterval> | undefined;
 
-    if (showAnimation) {
+    if (showAnimation==true) {
       interval = setInterval(() => {
         switch (text) {
           case 'Ready?':
@@ -28,7 +19,7 @@ const ReadyAnimation = () => {
             setText('Drink!');
             break;
           case 'Drink!':
-            setText('Ready?');
+            // setText('Ready?!');
             break;
           default:
             break;
@@ -40,12 +31,13 @@ const ReadyAnimation = () => {
 
     const timeout = setTimeout(() => {
       setShowAnimation(false);
-    }, 3000);
+    }, 2300);
 
     
     const redirectTimeout = setTimeout(() => {
       setShowAnimation(false);
-    }, 4000);
+      window.location.href = '/faceoffluces';
+    }, 2300);
 
     return () => {
       clearInterval(interval);
@@ -56,11 +48,11 @@ const ReadyAnimation = () => {
 
   return showAnimation ? (
     <div className="relative w-64 h-64">
-      <div className="absolute inset-0 border-8 border-purple-500 rounded-full animate-spin"></div>
-      <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-purple-500">
+      <div className="absolute inset-0 border-[24px] border-purple-500 rounded-full animate-spin"></div>
+      <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-white">
         <span>{text}</span>
       </div>
-      <div className="absolute inset-0 border-8 border-purple-500 rounded-full -rotate-45 overflow-hidden">
+      <div className="absolute inset-0 border-[24px] border-purple-500 rounded-full -rotate-45 overflow-hidden">
         <div className="w-3/4 h-full bg-transparent rounded-full"></div>
       </div>
     </div>
