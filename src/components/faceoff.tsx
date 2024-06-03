@@ -35,6 +35,7 @@ export default function Faceoff() {
                     src={faceoffLogo}
                     width={250}
                     alt="faceoff"
+                    priority
                 />
             ) : (
                 <>
