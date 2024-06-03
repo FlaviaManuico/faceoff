@@ -3,8 +3,7 @@
 import React, {useState, useEffect} from "react";
 import Image from "next/image";
 // import faceoffLogo from "./faceoff_logo.png"; 
-import faceoffLogo from "./logito.png"; 
-import Link from "next/link";
+import faceoffLogo from "./logito.png";
 
 export default function Faceoff() {
     const [showImage, setShowImage] = useState(true);
@@ -18,8 +17,8 @@ export default function Faceoff() {
     }, []);
 
     const handleButtonClick = () => {
-        
-    };
+        window.location.replace('/faceoffjuego');
+      };
 
     return (
         <div style={{
