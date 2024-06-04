@@ -1,7 +1,6 @@
 # faceoff
 
 ```
-next build
 npm run dev
 ```
 
