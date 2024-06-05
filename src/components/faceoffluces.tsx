@@ -109,6 +109,7 @@ const FaceoffLuces = () => {
             style={{ backgroundColor: currentColor }}
             onClick={() => handleClick('1')}
           >
+            <span className="text-2xl font-bold text-white transform rotate-180">Jugador 1</span>
           </button>
           <div className="w-full h-1 border-[6px] bg-white"></div>
           <button
@@ -116,6 +117,7 @@ const FaceoffLuces = () => {
             style={{ backgroundColor: currentColor }}
             onClick={() => handleClick('2')}
           >
+            <span className="text-2xl font-bold text-white">Jugador 2</span>
           </button>
         </div>
       )}
